@@ -2,15 +2,21 @@
 
 namespace Modules\TemplateExport;
 
+// HTML wrappers used in current module, there are a lot more of other HTML wrappers
 use CButton;
-use Core\CModule as CModule;
-use CController as CAction;
 use CTag;
-use CUrl;
 use CScriptTag;
 use CScriptTemplate;
 use CButtonExport;
 use CSubmitButton;
+
+// internal classes; CUrl for easy url generation
+use CUrl;
+
+// required for module definition
+use Core\CModule as CModule;
+use CController as CAction;
+
 
 class Module extends CModule {
 
