@@ -24,6 +24,10 @@ class Module extends CModule {
 	 *
 	 * @param CAction $action    Current request handler object.
 	 */
+	 
+	// will check is the current user action equal to templates.php
+	// every enabled module Module.php class methods: onBeforeAction will be called before user requested action is processed.
+	// every http anchor tag is "user requested action" if it points to PHP file. and if this .php file is mentioned in Router.php
 	public function onBeforeAction(CAction $action): void {
 		if ($action->getAction() === 'templates.php') {
 			$this->setPostInjectJavascript($_REQUEST);
@@ -33,6 +37,7 @@ class Module extends CModule {
 	/**
 	 * For login/logout actions update user seession state in multiple databases.
 	 */
+	// onTerminate will be called after user request is completed and data is ready to be send back to browser
 	public function onTerminate(CAction $action): void {
 		echo implode('', $this->scripts);
 	}
