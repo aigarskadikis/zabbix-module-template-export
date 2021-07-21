@@ -1,0 +1,10 @@
+{
+	"manifest_version": 1,
+	"id": "template-export",
+	"name": "Template export",
+	"author": "",
+	"description": "Add export button to template form.",
+	"version": "1.0",
+	"namespace": "TemplateExport",
+	"url": ""
+}
